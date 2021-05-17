@@ -150,4 +150,62 @@ def func(n, k):
 func(7, 2)
 '''
 # цикл while and break
+'''
+total = 0
+i1 = 0
+while i1 < 6:
+    total += i1
+    i1 += 1
+print(total)
+'''
+# Пример ниже показывает разницу между while and for, как только в списке
+# my_list встречается отрицательное число цикл прерывается в отличии от for
+'''
+# Пример
+my_list = [7, 5, 3, 1, -1, -5, -10, -15, 10]
+total = 0
+i = 0
+while my_list[i] > 0:
+    total += my_list[i]
+    i += 1
+print(total)
+
+# Пример
+
+total1 = 0
+for element in my_list:
+    if element > 0:
+        total1 += element
+print(total1)
+
+# Пример
+
+total2 = 0
+for element1 in my_list:
+    if element1 <= 0:
+        break               # break прерывает цикл на отрицательном значении
+    total2 += element1
+print(total2)
+
+# Пример
+
+total3 = 0
+i2 = 0
+while total3 < 10 and my_list[i2] > 0:
+    total3 += my_list[i2]
+    i2 += 1
+print(total3)
+
+# Пример
+
+my_list = [7, 5, 3, 1, 100]
+total = 0
+i = 0
+while i < len(my_list) and my_list[i] > 0:
+    total += my_list[i]
+    i += 1
+print(total)
+
+'''
+# Домашка
 
