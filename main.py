@@ -207,5 +207,43 @@ while i < len(my_list) and my_list[i] > 0:
 print(total)
 
 '''
-# Домашка
+# Домашка 1
+'''
+my_list = [7, 5, 4, 4, 3, 2, 1, -5, -10, -15, -25, -20]
+# while
+total_sum = 0
+i = -1
+while my_list[i] < 0:
+    total_sum += my_list[i]
+    i-=1
+print(total_sum)
+
+# for
+
+total_sum1 = 0
+for element in my_list:
+   if element > 0:
+       element += 1
+   else:
+       total_sum1 +=element
+print(total_sum1)
+'''
+# Домашка 2
+'''
+word_list = ["apple", "banana", "grape", "orange", "stop", "hello", "goodbye"]
+# while
+i = 0
+while word_list[i] != "stop":
+    print(word_list[i])
+    i += 1
+    
+# for
+
+
+for element in word_list:
+    print(element)
+    if element == "stop":
+       break
+'''
+
 
