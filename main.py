@@ -303,3 +303,113 @@ for word in my_text.split():
     my_dict2[word] = my_dict2.get(word, 0) + 1
 print(my_dict2)
 '''
+'''
+# Многомерные массивы
+a = {1, 2, 3, "hello"}
+
+# Объявляем
+
+array_2d = [[1, 2, 3],
+            [10, 20, 30],
+            [100, 200, 300]]
+print(array_2d)
+# обратиться к Элементу
+print(array_2d[0][2])
+
+array_2d2 = [[1, ],
+             [10, 20, 30, 40, 50, 60],
+             [100, 200, 300]]
+print(array_2d2)
+
+# Выводим многомерные массив в виде матрицы
+
+def print_matrix(array_2d):
+    for arr in array_2d:
+        print(arr)
+print_matrix(array_2d)
+'''
+'''
+def print_matrix(array_2d):
+    for arr in array_2d:
+        for el in arr:
+            print(el, end=' ')
+        print()
+
+print_matrix(array_2d)
+'''
+'''
+def print_matrix(array_2d):
+    for i in range(len(array_2d)):
+        for j in range(len(array_2d[i])):
+            print(array_2d[i][j], end=' ')
+        print()
+print_matrix(array_2d)
+'''
+# Обновить значение
+'''
+array_2d[1][1] = 21
+print(array_2d)
+'''
+# Домашка Задача 1
+'''
+# РАЗОБРАТЬ ПОДРОБНО!!!!!!!!!!!!
+def create_2d_array(m, n):
+    array_2d = []
+
+    for i in range(m):
+        internal_arr = []
+
+        for j in range(n):
+            internal_arr.append(0)
+
+        array_2d.append(internal_arr)
+
+    return array_2d
+
+arr_5_10 = create_2d_array(3, 4)
+print(arr_5_10)
+'''
+# Задача 2
+# Разобраться внимательно!!!!!
+'''
+array_2d = [[1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]]
+
+def swap(arr, i, j):                        # ф-ция замены символов
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+
+def mirror_2d_arr(array_2d):
+    for arr in array_2d:
+        for i in range(len(arr) // 2):      # вычисляем количество итераций
+            swap(arr, i, len(arr) - 1 - i)  # подставляем значения в ф-цию замены
+
+mirror_2d_arr(array_2d)                     # преобразование массива
+print(array_2d)
+'''
+# Генератор списков
+'''
+a = [1, 2, 3, 4, 5]
+b = []
+for i in a:
+    b.append(i*2)
+print(b)
+
+c = [num * 2 for num in a]
+print(c)
+
+range3 = [num * 3 for num in range(1,6)]
+print(range3)
+'''
+
+a = [1, 10, 20, 4, 3, 20, 55]
+a_filtered = []
+for num in a:
+    if num < 10:
+        a_filtered.append(num)
+print(a_filtered)
+
+a_filter = [num for num in a if num < 10]
+print(a_filter)
