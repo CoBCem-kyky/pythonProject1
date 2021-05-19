@@ -246,4 +246,60 @@ for element in word_list:
        break
 '''
 
+# Вложенные циклы
+'''
+names = ["Mike", "Tom", "Katy", "Alex"]
+n = len(names)
+for element in names:
+    print(element)
+for i in range(n):
+    print(names[i])
 
+for i in range(len(names)):
+    for j in range(i+1):
+        print(names[i])
+'''
+# dict - Словарь {"Ключ":"Значение"}
+'''
+d = {"Alex": 25, "Petr" : 37}
+print(d)
+d["Kate"] = 18
+print(d)
+d[10] = 20
+print(d)
+for k, v in d.items():
+    print(k)
+    print(v)
+
+for key, value in d.items():
+    print("Ключ: "+ str(key) + " Значение: " + str(value))
+'''
+# Домашка
+'''
+# Задача 1
+a = ["first", 1, 2, 3, "second", 10, 20, "third", 100, 110, 120, "fourth", 200]
+dict = {}
+current_str = None
+for e in a:
+    if (type(e) == str):
+        dict[e] = []
+        current_str = e
+    else:
+        dict[current_str].append(e)
+print(dict)
+
+# Задача 2
+my_text = "Привет пока как дела привет привет арбуз велосипед стол как слон арбуз да привет"
+new_dict = {}
+for word in my_text.split():
+    if word in new_dict:
+        new_dict[word] = new_dict[word] + 1
+    else:
+        new_dict[word] = 1
+print(new_dict)
+
+my_dict2 = {}
+for word in my_text.split():
+    my_dict2[word] = my_dict2.get(word, 0) + 1
+print(my_dict2)
+'''
