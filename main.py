@@ -403,7 +403,7 @@ print(c)
 range3 = [num * 3 for num in range(1,6)]
 print(range3)
 '''
-
+'''
 a = [1, 10, 20, 4, 3, 20, 55]
 a_filtered = []
 for num in a:
@@ -419,4 +419,18 @@ word_filtered = [word for word in words if len(word) < 6] # [word - (време�
                                                           # for word - (временная переменная в words in words)
                                                           # if len(word) < 6]
 print(word_filtered)
+'''
+# Домашка !!! Задача 1
+'''
+x = range(10, 1, 2)
+list = [num * 2 for num in range(10, 1, -1) if num % 2 == 0]
+print(list)
+'''
+# Домашка !!! Задача 1
+'''
+words = ["hello", "hey", "goodbye", "piono"]
+list_filtered = [word + "." for word in words if len(word) > 5]
+print(list_filtered)
+'''
+# Тип данных Множества (Set)
 
