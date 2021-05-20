@@ -413,3 +413,10 @@ print(a_filtered)
 
 a_filter = [num for num in a if num < 10]
 print(a_filter)
+
+words = ["hello", "hey", "goodbye", "piono"]
+word_filtered = [word for word in words if len(word) < 6] # [word - (временная переменная в word_filtered)
+                                                          # for word - (временная переменная в words in words)
+                                                          # if len(word) < 6]
+print(word_filtered)
+
