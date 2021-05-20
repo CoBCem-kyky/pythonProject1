@@ -433,4 +433,36 @@ list_filtered = [word + "." for word in words if len(word) > 5]
 print(list_filtered)
 '''
 # Тип данных Множества (Set)
+'''
+a = set([1, 10, 5, "hello"])
+print(a)
+b = set()
+print(b)
+b.add(1)
+print(b)
+print(type(b))
+'''
+'''
+list = [1, 2, 3, 1, 1, "hello", "hello"]
+my_set = set()
+for el in list:
+    my_set.add(el)
+print(list)
+print(my_set)
+'''
+'''
+list_list = [1, 2, 3, 1, 1, "hello", "hello"]
+my_set = set(list_list)
+print(list_list)
+print(my_set)
+my_list = list(my_set)
+print(my_list)
+'''
+my_list = [1, 1, 2, 5, 10, 10, 10]
+my_set = set(my_list)
+summ = 0
+for i in my_set:
+    summ+=i
+print(summ)
 
+print(sum(set(my_list)))
