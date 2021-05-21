@@ -1,3 +1,6 @@
+import datetime
+now = datetime.datetime.now()
+
 # name = input(str("Write your Name: "))
 # print("Hi,", name+"," + " It's Python")
 
@@ -483,3 +486,43 @@ b = [3, 1]
 print(func(a, b))
 '''
 # ООП, Классы и объекты
+class Person1: # Название класса всегда с Большой Буквы!
+    pass
+
+
+p1 = Person1()
+p1.name = "Elon"
+p1.surname = "Musk"
+p1.place_of_birth = "ЮАР"
+
+p2 = Person1()
+p2.name = "Sergey"
+p2.surname = "Korolev"
+p2.place_of_birth = "RF"
+
+print(f"Name: {p1.name},Surname: {p1.surname},Place of birth: {p1.place_of_birth}")
+
+# Методы и пареметры self
+
+class Person:  # Название класса всегда с Большой Буквы!
+    def print_info_person(self, n):
+        for i in range(n):
+            print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}")
+        print(now.year - int(f"{self.year_of_birth}"))
+
+p1 = Person()
+p1.name = "Elon"
+p1.surname = "Musk"
+p1.place_of_birth = "ЮАР"
+p1.year_of_birth = 1967
+
+
+p2 = Person()
+p2.name = "Sergey"
+p2.surname = "Korolev"
+p2.place_of_birth = "RF"
+p2.year_of_birth = 1990
+
+p1.print_info_person(1)                  # Вызов метода 1
+Person.print_info_person(p2, 1)            # Вызов метода 2
+
