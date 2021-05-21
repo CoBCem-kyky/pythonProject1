@@ -526,3 +526,4 @@ p2.year_of_birth = 1990
 p1.print_info_person(1)                  # Вызов метода 1
 Person.print_info_person(p2, 1)            # Вызов метода 2
 
+#  ПРодолжение
