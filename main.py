@@ -531,19 +531,16 @@ Person.print_info_person(p2, 1)            # Вызов метода 2
 #  Конструкторы
 n = 1
 class Person:  # Название класса всегда с Большой Буквы!
+    people_count = 0
     def __init__(self, name, surname, place_of_birth, year_of_birth):
         self.name = name
         self.surname = surname
         self.place_of_birth = place_of_birth
         self.year_of_birth = year_of_birth
+        Person.people_count += 1
 
-    def print_info_person(self, n):
-        if n == 1:
-            print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}")
-            print(now.year - int(f"{self.year_of_birth}"))
-        else:
-            for i in range(n):
-                print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}, Year: {now.year - self.year_of_birth}")
+    def print_info_person(self):
+        print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}, Year: {now.year - self.year_of_birth}")
 #            print(now.year - int(f"{self.year_of_birth}"))
 
 
@@ -552,6 +549,26 @@ class Person:  # Название класса всегда с Большой Б
 p1 = Person("Elon", "Mask", "ЮАР", 1971)
 p2 = Person("Sergei", "Korolev", "Russia", 1907)
 
-p1.print_info_person(n)
+p1.print_info_person()
 
-# Статические атрибуты
+# Статические атрибуты / Статические атрибуты
+
+class Circle:
+
+    PI = 3.14                                       # Название переменных с константами начинаются с большой буквы
+
+    def __init__(self, radius):
+        self.radius = radius
+    def get_perimeter(self):
+        return self.radius * 2 * Circle.PI          # Обращение к переменной PI через названия класса
+    def get_area(self):
+        return self.radius * self.PI ** 2           # Обращение к переменной PI через атрабут класса
+
+
+c1 = Circle(3)
+
+print(c1.get_perimeter())
+print(c1.get_area())
+
+print(Person.people_count)
+
