@@ -486,6 +486,7 @@ b = [3, 1]
 print(func(a, b))
 '''
 # ООП, Классы и объекты
+'''
 class Person1: # Название класса всегда с Большой Буквы!
     pass
 
@@ -501,9 +502,9 @@ p2.surname = "Korolev"
 p2.place_of_birth = "RF"
 
 print(f"Name: {p1.name},Surname: {p1.surname},Place of birth: {p1.place_of_birth}")
-
+'''
 # Методы и пареметры self
-
+'''
 class Person:  # Название класса всегда с Большой Буквы!
     def print_info_person(self, n):
         for i in range(n):
@@ -525,5 +526,32 @@ p2.year_of_birth = 1990
 
 p1.print_info_person(1)                  # Вызов метода 1
 Person.print_info_person(p2, 1)            # Вызов метода 2
+'''
 
-#  ПРодолжение
+#  Конструкторы
+n = 1
+class Person:  # Название класса всегда с Большой Буквы!
+    def __init__(self, name, surname, place_of_birth, year_of_birth):
+        self.name = name
+        self.surname = surname
+        self.place_of_birth = place_of_birth
+        self.year_of_birth = year_of_birth
+
+    def print_info_person(self, n):
+        if n == 1:
+            print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}")
+            print(now.year - int(f"{self.year_of_birth}"))
+        else:
+            for i in range(n):
+                print(f"Name: {self.name},Surname: {self.surname},Place of birth: {self.place_of_birth}, Year: {now.year - self.year_of_birth}")
+#            print(now.year - int(f"{self.year_of_birth}"))
+
+
+
+
+p1 = Person("Elon", "Mask", "ЮАР", 1971)
+p2 = Person("Sergei", "Korolev", "Russia", 1907)
+
+p1.print_info_person(n)
+
+# Статические атрибуты
