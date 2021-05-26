@@ -43,3 +43,41 @@ for person in people_arr:
 #Dog- доп. атрибут breed, bark()- "Dog name {name} is barking"
 #Cat - доп. атрибутов нет, meow() - "Meow"
 # Frog - доп. атрибутов нет, eat() - Frog is eating - переопределить метод eat
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        print("Animal created")
+
+    def eat(self):
+        print(f" {self.name} Eating")
+
+class Dog(Animal):
+        def __init__(self, name, breed):
+#            Animal.__init__(self, name)
+            super().__init__(name)
+            self.breed = breed
+
+        def bark(self):
+            print(f"{self.breed} with dog name {self.name} is barking")
+
+class Cat(Animal):
+    def meow(self):
+        print(f"{self.name} Meow, meow, meow")
+
+class Frog(Animal):
+    def eat(self):
+        super().eat()
+        print(f"Frog {self.name} is eating")
+
+c1 = Cat("Snezhok")
+c1.meow()
+c1.eat()
+
+d1 = Dog("Laima", "Pidel")
+d1.bark()
+d1.eat()
+
+f1 = Frog("DZhan")
+f1.eat()
+
